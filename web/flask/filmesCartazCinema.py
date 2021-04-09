@@ -7,7 +7,7 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/index', methods=['GET'])
 def filmes():
     html_doc = urllib.request.urlopen("http://www.adorocinema.com/filmes/numero-cinemas/").read()
     soup = BeautifulSoup(html_doc, "html.parser")
